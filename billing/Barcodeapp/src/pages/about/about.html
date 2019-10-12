@@ -7,13 +7,9 @@
   </ion-header>
 
 
-<ion-content *ngIf="!!invoices[0]"> 
-    <ion-card *ngFor="let inv of invoices" (click)="cardTouch(inv)">
-      <ion-card-content id="felso"> {{inv.company.name}} </ion-card-content>
-      <ion-card-content id="kozepso"> {{inv.company.addres}} </ion-card-content>
-      <ion-card-content id="also"> {{inv.company.tax}} </ion-card-content>
-      <ion-card-content id="kozepso" *ngFor="let pr of inv.products"> {{pr.name}} {{pr.quantity}} {{pr.price}}</ion-card-content>
-      <ion-card-content id="felso"> {{inv.other.date}} </ion-card-content>
-      <ion-card-content id="also"> {{inv.other.docnumber}} </ion-card-content>
+<ion-content *ngIf="!!invoicesWriteOut[0]"> 
+    <ion-card *ngFor="let inv of invoicesWriteOut;  let i = index" (click)="cardTouch(i)">
+      <ion-card-content id="bill">{{inv}} </ion-card-content>
+      <ion-card-content id="war" *ngIf="!!invoicesData[i].other.war">Warranty expires on: {{invoicesData[i].bankResponds.date}} </ion-card-content>
     </ion-card>
   </ion-content>

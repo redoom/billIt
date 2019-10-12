@@ -22,7 +22,13 @@ export class AppComponent {
 
     let addCompany = new BillCompany("HACKUPC","\t\tCarrer de Mallorca, 401,\n\t\t08013 Barcelona, Spain", "Team Billit", "Budapest, Hosok tere, 1146 Hungary",  "012826501");
     let addOther = new BillOther("13-10-2019", "A01FG2573");
-    let addBankResponds = new BillBankResponds("000059644", "3953", "HACKUPC BANK", "Mastercard", "**** **** **** 2185", "13-10-2019", "0000053976", "649375", "A000000005395", "ACCEPTED", "CTLS ONLINE PIN" )
+
+    let totalPrice: number = 0;
+    for (let pr of this.products) {
+      totalPrice += pr.price * pr.quantity;
+    }
+
+    let addBankResponds = new BillBankResponds(totalPrice,"000059644", "3953", "HACKUPC BANK", "Mastercard", "**** **** **** 2185", "13-10-2019", "0000053976", "649375", "A000000005395", "ACCEPTED", "CTLS ONLINE PIN" )
     let bill = new BillData(addCompany, this.products, addBankResponds, addOther);
     console.log(bill);
     this.finalbill = bill;
@@ -41,7 +47,7 @@ class BillCompany {
 }
 
 class BillBankResponds {
-  constructor(public terminalId: string, public clerk: string, public acq: string, public card: string, public cardNo: string, public date: string, public refno: string, public auth: string, public aid: string, public resp: string, public mode: string) {
+  constructor( public total: number, public terminalId: string, public clerk: string, public acq: string, public card: string, public cardNo: string, public date: string, public refno: string, public auth: string, public aid: string, public resp: string, public mode: string) {
     
   }
 }
