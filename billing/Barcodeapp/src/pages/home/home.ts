@@ -26,8 +26,8 @@ export class HomePage {
       this.niceString += "--------------------------------------------\n";
       let productsString;
       for (let pr of sc.products) {
-        this.niceString = this.niceString + "\t" + pr.name + "\t\t" + pr.quantity + "\t\t" + pr.price + " EUR" + "\n";
-        this.totalPrice += parseInt(pr.price);
+        this.niceString = this.niceString + "\t" + pr.name + "\t\t" + pr.quantity + "\t\t" + pr.price * pr.quantity + " EUR" + "\n";
+        this.totalPrice += parseInt(pr.price) * parseInt(pr.quantity);
       }
       this.niceString += "Total:" + "\t\t\t\t\t" + this.totalPrice + " EUR\n";
       this.niceString += "\t------------------------------------";

@@ -7,9 +7,9 @@
   </ion-header>
 
 
-<ion-content *ngIf="!!invoicesWriteOut[0]"> 
+<ion-content *ngIf="!!invoicesWriteOut[0]" padding> 
     <ion-card *ngFor="let inv of invoicesWriteOut;  let i = index" (click)="cardTouch(i)">
-      <ion-card-content id="bill">{{inv}} </ion-card-content>
+      <ion-card-content id="bill" >{{inv}} </ion-card-content>
       <ion-card-content id="war" *ngIf="!!invoicesData[i].other.war">Warranty expires on: {{invoicesData[i].bankResponds.date}} </ion-card-content>
     </ion-card>
   </ion-content>
