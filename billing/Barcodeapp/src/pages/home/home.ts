@@ -11,14 +11,16 @@ export class HomePage {
   qrData = null;
   createdCode = null;
   scannedCode = null;
+  niceString;
 
   constructor(public navCtrl: NavController,private barcodeScanner: BarcodeScanner) {
-
+    this.niceString = "abc \n abc"
   }
  
   scanCode() {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scannedCode = barcodeData.text;
+
     }, (err) => {
         console.log('Error: ', err);
     });

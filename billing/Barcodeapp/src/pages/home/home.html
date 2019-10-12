@@ -7,6 +7,8 @@
 </ion-header>
 
 <ion-content padding>
+  <h1>{{niceString}}</h1>
+
   <button *ngIf="!scannedCode" id="billbutton" ion-button full icon-left (click)="scanCode()" color="secondary">
     <img id="logobutton" data-orientation="landscape" src="../../assets/imgs/Scan_logo.png" class="iconic" alt="image" />
   </button>
