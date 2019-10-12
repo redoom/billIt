@@ -1,19 +1,26 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      QR Code Creater
+    <ion-title id="orange">
+      <img id="billit" data-orientation="landscape" src="../../assets/imgs/Text_logo_tr.PNG" class="iconic" alt="image" />
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <button ion-button full icon-left (click)="scanCode()" color="secondary">
-    <ion-icon name="qr-scanner"></ion-icon>Scan Code</button>
+  <button *ngIf="!scannedCode" id="billbutton" ion-button full icon-left (click)="scanCode()" color="secondary">
+    <img id="logobutton" data-orientation="landscape" src="../../assets/imgs/Scan_logo.png" class="iconic" alt="image" />
+  </button>
+
+    
 
   <ion-card *ngIf="scannedCode">
     <ion-card-content>
       Result from Scan: {{ scannedCode }}
     </ion-card-content>
   </ion-card>
+
+  <button *ngIf="scannedCode" id="backButton" ion-button full icon-left (click)="backButton()" color="secondary">
+      <img id="backbuttonimg" data-orientation="landscape" src="../../assets/imgs/Back_logo.png" class="iconic" alt="image" />
+  </button>
 
 </ion-content>

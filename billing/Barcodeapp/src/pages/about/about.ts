@@ -13,7 +13,7 @@ export class AboutPage {
   scannedCode = null;
 
   constructor(public navCtrl: NavController, private barcodeScanner: BarcodeScanner) {
-
+    
   }
 
   scanCode() {

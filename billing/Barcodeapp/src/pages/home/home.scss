@@ -1,3 +1,42 @@
 page-home {
+    #orange{
+        background-color: #dc6e37;
+        
+    }
+    #billit{
+        max-height: 45px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
+    #billbutton{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+        height: 150px;
+        margin-top: 50%;
+        background-color: #dc6e37;
+        border-radius: 20px;
+    }
+
+    #logobutton{
+        height: 110px;
+        width: 110px;
+    }
+
+    #backButton{
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #dc6e37;
+        border-radius: 20px;
+    }
+
+    #backbuttonimg{
+        width: 90px;
+        height: 35px;
+    }
 }
