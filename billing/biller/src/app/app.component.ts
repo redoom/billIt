@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'billQr';
   products: Product[] = [];
   billJson;
+  finalbill;
 
   newRow(){
     let add = new Product("", null, null);
@@ -24,6 +25,7 @@ export class AppComponent {
     let addBankResponds = new BillBankResponds("000059644", "3953", "HACKUPC BANK", "Mastercard", "**** **** **** 2185", "13-10-2019", "0000053976", "649375", "A000000005395", "ACCEPTED", "CTLS ONLINE PIN" )
     let bill = new BillData(addCompany, this.products, addBankResponds, addOther);
     console.log(bill);
+    this.finalbill = bill;
     this.billJson = JSON.stringify(bill);
     console.log(this.billJson);
   }

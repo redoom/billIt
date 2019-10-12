@@ -298,3 +298,18 @@
     border: 2px solid #555555;
     border-radius: 4px;
   }
+
+  #name{
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+  }
+  #addres1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  #addres2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+  }

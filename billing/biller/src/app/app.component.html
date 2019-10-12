@@ -14,6 +14,9 @@
 </div>
 
 <div class="content" role="main">
+  <h1 id="name">HACKUPC</h1>
+  <h4 id="addres1">Carrer de Mallorca, 401, 08013</h4>
+  <h4 id="addres2">Barcelona, Spain</h4>
   <button (click)="newRow()">New Bill</button>
 
   <div *ngIf="!!products[0]">  
@@ -39,7 +42,7 @@
     </table>
   </div>
 
-  <button (click)="billIt()">Finished</button>
+  <button *ngIf="!!products[0]" (click)="billIt()">Finished</button>
   <ngx-kjua *ngIf="!!billJson" [text]="billJson"></ngx-kjua>
 </div>
 
