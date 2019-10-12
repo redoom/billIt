@@ -6,13 +6,14 @@
     </ion-navbar>
   </ion-header>
 
-<ion-content padding>
-  <button ion-button full icon-left id="buttonscan" (click)="scanCode()">
-    <ion-icon name="qr-scanner"></ion-icon>Scan Code</button>
 
-  <ion-card *ngIf="scannedCode">
-    <ion-card-content>
-      Result from Scan: {{ scannedCode }}
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+<ion-content *ngIf="!!invoices[0]"> 
+    <ion-card *ngFor="let inv of invoices" (click)="cardTouch(inv)">
+      <ion-card-content id="felso"> {{inv.company.name}} </ion-card-content>
+      <ion-card-content id="kozepso"> {{inv.company.addres}} </ion-card-content>
+      <ion-card-content id="also"> {{inv.company.tax}} </ion-card-content>
+      <ion-card-content id="kozepso" *ngFor="let pr of inv.products"> {{pr.name}} {{pr.quantity}} {{pr.price}}</ion-card-content>
+      <ion-card-content id="felso"> {{inv.other.date}} </ion-card-content>
+      <ion-card-content id="also"> {{inv.other.docnumber}} </ion-card-content>
+    </ion-card>
+  </ion-content>

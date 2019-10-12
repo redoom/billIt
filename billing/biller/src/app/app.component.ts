@@ -20,7 +20,7 @@ export class AppComponent {
     this.products.length = this.products.length -1;
     console.log(this.products);
 
-    let addCompany = new BillCompany("HACKUPC","Carrer de Mallorca, 401, 08013 Barcelona, Spain", "Team BillIt", "Budapest, Hosok tere, 1146 Hungary",  "012826501");
+    let addCompany = new BillCompany("HACKUPC","\t\tCarrer de Mallorca, 401,\n\t\t08013 Barcelona, Spain", "Team Billit", "Budapest, Hosok tere, 1146 Hungary",  "012826501");
     let addOther = new BillOther("13-10-2019", "A01FG2573");
     let addBankResponds = new BillBankResponds("000059644", "3953", "HACKUPC BANK", "Mastercard", "**** **** **** 2185", "13-10-2019", "0000053976", "649375", "A000000005395", "ACCEPTED", "CTLS ONLINE PIN" )
     let bill = new BillData(addCompany, this.products, addBankResponds, addOther);
