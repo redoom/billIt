@@ -13,6 +13,7 @@ export class AboutPage {
 
   spaces = "\t\t"
 
+  
   constructor() {
     let add1 = {"company":{"name":"HACKUPC   ","addres":"\t\tCarrer de Mallorca, 401,\n\t\t08013 Barcelona, Spain","storeId":"Team Billit","storeAddres":"Budapest, Hosok tere, 1146 Hungary","vat":"012826501"},"invoices":[{"name":"alma","quantity":"10","price":"100"},{"name":"korte","quantity":"5","price":"60"},{"name":"cseri","quantity":"52","price":"60"}],"bankResponds":{"total":100,"terminalId":"000059644","clerk":"3953","acq":"HACKUPC BANK","card":"Mastercard","cardNo":"**** **** **** 2185","date":"13-10-2019","refno":"0000053976","auth":"649375","aid":"A000000005395","resp":"ACCEPTED","mode":"CTLS ONLINE PIN"},"other":{"date":"13-10-2019","docnumber":"A01FG2573", "war": "true"}};
     this.invoicesData.push(add1);

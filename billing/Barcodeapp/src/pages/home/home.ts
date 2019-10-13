@@ -39,6 +39,7 @@ export class HomePage {
         console.log('Error: ', err);
     });
   }
+  
   backButton() {
     this.qrData = null;
     this.createdCode = null;
