@@ -3,6 +3,9 @@ page-contact {
         background-color: #dc6e37;
         
     }
+    #green{
+        background-color:  #0ca537
+    }
 
     #billit{
         max-height: 45px;
@@ -10,5 +13,45 @@ page-contact {
         margin-left: auto;
         margin-right: auto;
     }
+
+    #year{
+        margin-left: 48%;
+    }
+
+    #box{
+        margin-top: 0%;
+        max-height: 150px;
+        max-width: 150px;
+    }
+
+    #header{
+        padding-bottom: 4px;
+    }
+
+    #cardTitle{
+        padding-bottom: 0px;
+        padding-top: 0px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    #first{
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    #percent{
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+
+    #last{
+
+        padding-top: 0px;
+    }
+
+
 
 }

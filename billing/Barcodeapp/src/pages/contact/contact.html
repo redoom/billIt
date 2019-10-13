@@ -1,24 +1,138 @@
 <ion-header>
     <ion-navbar>
-      <ion-title id="orange">
-        <img id="billit" data-orientation="landscape" src="../../assets/imgs/Text_logo_tr.PNG" class="iconic" alt="image" />
+      <ion-title id="green">
+        <img id="billit" data-orientation="landscape" src="../../assets/imgs/billit_green.png" class="iconic" alt="image" />
       </ion-title>
     </ion-navbar>
-  </ion-header>
+</ion-header>
+
+
 
 <ion-content>
+    <ion-item>
+      <h2 id="year">2019</h2>
+      </ion-item>
+    
+
+
+      <ion-card> 
+        <div style="width:55%; display: inline-block">
+          <ion-card-header id="header">
+            <ion-card-title id="cardTitle">Tree</ion-card-title>
+          </ion-card-header>
+          <ion-card-content id="first">
+            You saved
+          </ion-card-content>
+          <ion-card-content id="percent">
+            49%
+          </ion-card-content>
+          <ion-card-content id="last">
+            of your share to make our planet a more habitable place!
+          </ion-card-content>
+        </div>
+        <div style="width:44%; display: inline-block; float = right">
+          <img id="box" src="../../assets/imgs/Tree.png "/>
+        </div>
+      </ion-card>
+
+      <ion-card> 
+        <div style="width:55%; display: inline-block">
+          <ion-card-header id="header">
+            <ion-card-title id="cardTitle">Water</ion-card-title>
+          </ion-card-header>
+          <ion-card-content id="first">
+            You saved
+          </ion-card-content>
+          <ion-card-content id="percent">
+            49%
+          </ion-card-content>
+          <ion-card-content id="last">
+            of your share to make our planet a more habitable place!
+          </ion-card-content>
+        </div>
+        <div style="width:44%; display: inline-block; float = right">
+          <img id="box" src="../../assets/imgs/Water.png "/>
+        </div>
+      </ion-card>
+
+      <ion-card> 
+        <div style="width:55%; display: inline-block">
+          <ion-card-header id="header">
+            <ion-card-title id="cardTitle">Waste</ion-card-title>
+          </ion-card-header>
+          <ion-card-content id="first">
+            You saved
+          </ion-card-content>
+          <ion-card-content id="percent">
+            49%
+          </ion-card-content>
+          <ion-card-content id="last">
+            of your share to make our planet a more habitable place!
+          </ion-card-content>
+        </div>
+        <div style="width:44%; display: inline-block; float = right">
+          <img id="box" src="../../assets/imgs/Waste.png "/>
+        </div>
+      </ion-card>
+
   <ion-item>
-    <ion-input type="text" placeholder="MY QR Code data" [(ngModel)]="qrData">
-    </ion-input>
+      <h2 id="year">2018</h2>
   </ion-item>
 
-  <button ion-button full icon-left (click)="createCode()">
-    <ion-icon name="barcode"></ion-icon>Create Code</button>
+  <ion-card> 
+      <div style="width: 600px; float: left">
+      <ion-card-header>
+        <ion-card-title>Tree</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Your contribution to save a tree in this year: 
+      </ion-card-content>
+      </div>
+      <div style="margin-left: 620px">
+        <img id="box" src="../../assets/imgs/Tree.png " align="right"/>
+      </div>
+    </ion-card>
 
-  <ion-card *ngIf="createdCode">
-    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
-    <ion-card-content>
-      <p>Value: {{ createdCode }}</p>
-    </ion-card-content>
-  </ion-card>
+    <ion-card> 
+        <div style="width: 600px; float: left">
+        <ion-card-header>
+          <ion-card-title>Water</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Your contribution to save a tree in this year: 
+        </ion-card-content>
+        </div>
+        <div style="margin-left: 620px">
+          <img id="box" src="../../assets/imgs/Water.png " align="right"/>
+        </div>
+    </ion-card>
+  
+    <ion-card> 
+        <div style="width: 600px; float: left">
+        <ion-card-header>
+          <ion-card-title>Waste</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Your contribution to save a tree in this year: 
+        </ion-card-content>
+        </div>
+        <div style="margin-left: 620px">
+          <img id="box" src="../../assets/imgs/Waste.png " align="right"/>
+        </div>
+    </ion-card>
+    <ion-card> 
+        <div style="width: 600px; float: left">
+        <ion-card-header>
+          <ion-card-title>CO2</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Your contribution to save a tree in this year: 
+        </ion-card-content>
+        </div>
+        <div style="margin-left: 620px">
+          <img id="box" src="../../assets/imgs/CO2.png " align="right"/>
+        </div>
+    </ion-card>
+
+
 </ion-content>
